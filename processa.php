@@ -17,11 +17,11 @@ echo "<pre>";
 print_r($data);
 echo "/<pre>";
 
-$data= json_decode(file_get_contents("historico.json", true));
+$save= json_decode(file_get_contents("historico.json", true));
 
 $novo = [
     "cep" => $cep
 ];
 
-$data[] = $novo;
+$save[] = $novo;
 file_put_contents("historico.json", json_encode($data));
